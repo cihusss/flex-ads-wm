@@ -1,4 +1,3 @@
-//resize function fires on load and every window resize
 function launchAd(event) {
  
   // get wrapper width
@@ -16,12 +15,11 @@ function launchAd(event) {
   // set text var
   var txt = wrapperWidth + " x " + wrapperHeight;
   
-  // set bg image var
+  // set bg image var model
   var bgImage = "url(img/bg-" + adWidth + "x" + adHeight + "-";
 
-  // assign background images and image container dimensions
-  for (i = 0; i < 4; i++) {
-      
+  // assign background images to image containers and set dimensions
+  for (i = 0; i < 4; i++) {    
       var select = document.getElementById("bg" + i)
       select.style.backgroundImage = bgImage + i + ".jpg"; 
       select.style.width = adWidth + "px";
@@ -170,7 +168,6 @@ function launchAd(event) {
   document.getElementById("value").innerHTML = txt;
   
   // console.log(adWidth + ":" + adHeight);
-
 }
 
 launchAd();
