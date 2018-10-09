@@ -83,7 +83,7 @@ function launchAd(event) {
 
   }
 
-  if (wrapperWidth == 728 && wrapperHeight == 90) {
+  else if (wrapperWidth == 728 && wrapperHeight == 90) {
 
       document.getElementById("button").style.display = "block";
       document.getElementById("button").style.right = "30px";
@@ -110,7 +110,7 @@ function launchAd(event) {
 
   }
 
-  if (wrapperWidth == 300 && wrapperHeight == 250 ) {
+  else if (wrapperWidth == 300 && wrapperHeight == 250 ) {
 
       document.getElementById("button").style.display = "block";
       document.getElementById("button").style.right = "22px";
@@ -137,7 +137,7 @@ function launchAd(event) {
 
   }
 
-  if (wrapperWidth == 640 && wrapperHeight == 480) {
+  else if (wrapperWidth == 640 && wrapperHeight == 480) {
 
       document.getElementById("button").style.display = "block";
       document.getElementById("button").style.right = "240px";
@@ -163,6 +163,12 @@ function launchAd(event) {
 
       TweenLite.fromTo("#bg3", 1, {left: -adWidth, delay: 6}, {left: 0, delay: 6, ease: Power2.easeOut});
       TweenLite.fromTo("#headline3", 1, {top: 40, right: -100, opacity: 0, delay: 6}, {top: 40, left: 0, opacity: 1, delay: 6, ease: Power2.easeOut});
+  }
+
+  else {
+
+    // document.getElementById("ad").style.backgroundImage = "url('https://cdn.dribbble.com/users/26516/screenshots/2491272/mountain-cry.gif')";
+  
   }
   
   // inject text
