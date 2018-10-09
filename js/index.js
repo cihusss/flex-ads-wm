@@ -28,9 +28,10 @@ function launchAd(event) {
       select.style.height = adHeight + "px";
   }
 
-  // animation sequence and styles
-  if (wrapperWidth == 970 && wrapperHeight == 250) {
-
+  // adaptive styles and animation sequences
+  switch(wrapperWidth + wrapperHeight) {
+    // 970+250
+    case 1220:
       document.getElementById("button").style.display = "block";
       document.getElementById("button").style.right = "60px";
       document.getElementById("button").style.top = "105px";
@@ -53,11 +54,10 @@ function launchAd(event) {
 
       TweenLite.fromTo("#bg3", 1, {left: -adWidth, delay: 6}, {left: 0, delay: 6, ease: Power2.easeOut});
       TweenLite.fromTo("#headline3", 1, {top: 85, right: -100, opacity: 0, delay: 6}, {top: 85, left: 0, opacity: 1, delay: 6, ease: Power2.easeOut});
-  
-  }
+      break;
 
-  if (wrapperWidth == 300 && wrapperHeight == 600) {
-
+    // 300+600
+    case 900:
       document.getElementById("button").style.display = "block";
       document.getElementById("button").style.right = "130px";
       document.getElementById("button").style.top = "205px";
@@ -80,38 +80,10 @@ function launchAd(event) {
 
       TweenLite.fromTo("#bg3", 1, {left: -adWidth, delay: 6}, {left: 0, delay: 6, ease: Power2.easeOut});
       TweenLite.fromTo("#headline3", 1, {top: 35, right: -100, opacity: 0, scale: .9, delay: 6}, {top: 35, left: 0, opacity: 1, scale: .9, delay: 6, ease: Power2.easeOut});
+      break;
 
-  }
-
-  else if (wrapperWidth == 728 && wrapperHeight == 90) {
-
-      document.getElementById("button").style.display = "block";
-      document.getElementById("button").style.right = "30px";
-      document.getElementById("button").style.top = "28px";
-
-      document.getElementById("logo").style.display = "block";
-      document.getElementById("logo").style.right = "90px";
-      document.getElementById("logo").style.top = "32px";
-
-      TweenLite.fromTo("#bg0", 1, {left: -adWidth, delay: 0}, {left: 0, delay: 0, ease: Power2.easeOut});
-      TweenLite.fromTo("#headline0", 1, {top: 25, right: -100, opacity: 0, delay: 0}, {top: 25, left: 0, opacity: 1, delay: 0, ease: Power2.easeOut});
-      TweenLite.to("#headline0", .3, {delay: 2, opacity: 0});
-
-      TweenLite.fromTo("#bg1", 1, {left: -adWidth, delay: 2}, {left: 0, delay: 2, ease: Power2.easeOut});
-      TweenLite.fromTo("#headline1", 1, {top: 25, right: -100, opacity: 0, delay: 2}, {top: 25, left: 0, opacity: 1, delay: 2, ease: Power2.easeOut});
-      TweenLite.to("#headline1", .3, {delay: 4, opacity: 0});
-
-      TweenLite.fromTo("#bg2", 1, {left: -adWidth, delay: 4}, {left: 0, delay: 4, ease: Power2.easeOut});
-      TweenLite.fromTo("#headline2", 1, {top: 25, right: -100, opacity: 0,  delay: 4}, {top: 25, left: 0, opacity: 1, delay: 4, ease: Power2.easeOut});
-      TweenLite.to("#headline2", .3, {delay: 6, opacity: 0});
-
-      TweenLite.fromTo("#bg3", 1, {left: -adWidth, delay: 6}, {left: 0, delay: 6, ease: Power2.easeOut});
-      TweenLite.fromTo("#headline3", 1, {top: 15, right: -100, lineHeight: 1.2, opacity: 0, delay: 6}, {top: 15, left: 0, lineHeight: 1.2, opacity: 1, delay: 6, ease: Power2.easeOut});
-
-  }
-
-  else if (wrapperWidth == 300 && wrapperHeight == 250 ) {
-
+    // 300+250
+    case 550:
       document.getElementById("button").style.display = "block";
       document.getElementById("button").style.right = "22px";
       document.getElementById("button").style.top = "190px";
@@ -134,41 +106,64 @@ function launchAd(event) {
 
       TweenLite.fromTo("#bg3", 1, {left: -adWidth, delay: 6}, {left: 0, delay: 6, ease: Power2.easeOut});
       TweenLite.fromTo("#headline3", 1, {top: 35, right: -100, lineHeight: 1.2, opacity: 0, width: 180, textAlign: "right", scale: .8, delay: 6}, {top: 35, left: 115, textAlign: "right", lineHeight: 1.2, scale: .8, opacity: 1, width: 180, delay: 6, ease: Power2.easeOut});
+      break;
 
-  }
-
-  else if (wrapperWidth == 640 && wrapperHeight == 480) {
-
+    // 729+90
+    case 818:
       document.getElementById("button").style.display = "block";
-      document.getElementById("button").style.right = "240px";
-      document.getElementById("button").style.top = "110px";
+      document.getElementById("button").style.right = "30px";
+      document.getElementById("button").style.top = "28px";
 
       document.getElementById("logo").style.display = "block";
-      document.getElementById("logo").style.right = "305px";
-      document.getElementById("logo").style.top = "110px";
-
-      document.getElementById("strong").style.display = "inline";
+      document.getElementById("logo").style.right = "90px";
+      document.getElementById("logo").style.top = "32px";
 
       TweenLite.fromTo("#bg0", 1, {left: -adWidth, delay: 0}, {left: 0, delay: 0, ease: Power2.easeOut});
-      TweenLite.fromTo("#headline0", 1, {top: 40, right: -100, opacity: 0, delay: 0}, {top: 40, left: 0, opacity: 1, delay: 0, ease: Power2.easeOut});
+      TweenLite.fromTo("#headline0", 1, {top: 25, right: -100, opacity: 0, delay: 0}, {top: 25, left: 0, opacity: 1, delay: 0, ease: Power2.easeOut});
       TweenLite.to("#headline0", .3, {delay: 2, opacity: 0});
 
       TweenLite.fromTo("#bg1", 1, {left: -adWidth, delay: 2}, {left: 0, delay: 2, ease: Power2.easeOut});
-      TweenLite.fromTo("#headline1", 1, {top: 40, right: -100, opacity: 0, delay: 2}, {top: 40, left: 0, opacity: 1, delay: 2, ease: Power2.easeOut});
+      TweenLite.fromTo("#headline1", 1, {top: 25, right: -100, opacity: 0, delay: 2}, {top: 25, left: 0, opacity: 1, delay: 2, ease: Power2.easeOut});
       TweenLite.to("#headline1", .3, {delay: 4, opacity: 0});
 
       TweenLite.fromTo("#bg2", 1, {left: -adWidth, delay: 4}, {left: 0, delay: 4, ease: Power2.easeOut});
-      TweenLite.fromTo("#headline2", 1, {top: 40, right: -100, opacity: 0,  delay: 4}, {top: 40, left: 0, opacity: 1, delay: 4, ease: Power2.easeOut});
+      TweenLite.fromTo("#headline2", 1, {top: 25, right: -100, opacity: 0,  delay: 4}, {top: 25, left: 0, opacity: 1, delay: 4, ease: Power2.easeOut});
       TweenLite.to("#headline2", .3, {delay: 6, opacity: 0});
 
       TweenLite.fromTo("#bg3", 1, {left: -adWidth, delay: 6}, {left: 0, delay: 6, ease: Power2.easeOut});
-      TweenLite.fromTo("#headline3", 1, {top: 40, right: -100, opacity: 0, delay: 6}, {top: 40, left: 0, opacity: 1, delay: 6, ease: Power2.easeOut});
-  }
+      TweenLite.fromTo("#headline3", 1, {top: 15, right: -100, lineHeight: 1.2, opacity: 0, delay: 6}, {top: 15, left: 0, lineHeight: 1.2, opacity: 1, delay: 6, ease: Power2.easeOut});
+      break;
 
-  else {
+      // 640+480
+      case 1120:
+        document.getElementById("button").style.display = "block";
+        document.getElementById("button").style.right = "240px";
+        document.getElementById("button").style.top = "110px";
 
-    // document.getElementById("ad").style.backgroundImage = "url('https://cdn.dribbble.com/users/26516/screenshots/2491272/mountain-cry.gif')";
-  
+        document.getElementById("logo").style.display = "block";
+        document.getElementById("logo").style.right = "305px";
+        document.getElementById("logo").style.top = "110px";
+
+        document.getElementById("strong").style.display = "inline";
+
+        TweenLite.fromTo("#bg0", 1, {left: -adWidth, delay: 0}, {left: 0, delay: 0, ease: Power2.easeOut});
+        TweenLite.fromTo("#headline0", 1, {top: 40, right: -100, opacity: 0, delay: 0}, {top: 40, left: 0, opacity: 1, delay: 0, ease: Power2.easeOut});
+        TweenLite.to("#headline0", .3, {delay: 2, opacity: 0});
+
+        TweenLite.fromTo("#bg1", 1, {left: -adWidth, delay: 2}, {left: 0, delay: 2, ease: Power2.easeOut});
+        TweenLite.fromTo("#headline1", 1, {top: 40, right: -100, opacity: 0, delay: 2}, {top: 40, left: 0, opacity: 1, delay: 2, ease: Power2.easeOut});
+        TweenLite.to("#headline1", .3, {delay: 4, opacity: 0});
+
+        TweenLite.fromTo("#bg2", 1, {left: -adWidth, delay: 4}, {left: 0, delay: 4, ease: Power2.easeOut});
+        TweenLite.fromTo("#headline2", 1, {top: 40, right: -100, opacity: 0,  delay: 4}, {top: 40, left: 0, opacity: 1, delay: 4, ease: Power2.easeOut});
+        TweenLite.to("#headline2", .3, {delay: 6, opacity: 0});
+
+        TweenLite.fromTo("#bg3", 1, {left: -adWidth, delay: 6}, {left: 0, delay: 6, ease: Power2.easeOut});
+        TweenLite.fromTo("#headline3", 1, {top: 40, right: -100, opacity: 0, delay: 6}, {top: 40, left: 0, opacity: 1, delay: 6, ease: Power2.easeOut});
+        break;
+
+      default:
+        document.getElementById("ad").style.backgroundImage = "url('https://cdn.dribbble.com/users/26516/screenshots/2491272/mountain-cry.gif')";
   }
   
   // inject text
