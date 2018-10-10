@@ -136,7 +136,7 @@ function launchAd(event) {
       case 1120:
         document.getElementById("button").style.display = "block";
         document.getElementById("button").style.right = "240px";
-        document.getElementById("button").style.top = "110px";
+        document.getElementById("button").style.top = "106px";
 
         document.getElementById("logo").style.display = "block";
         document.getElementById("logo").style.right = "305px";
