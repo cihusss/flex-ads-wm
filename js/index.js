@@ -161,7 +161,8 @@ function launchAd(event) {
         break;
 
       default:
-        document.getElementById("ad").style.backgroundImage = "url('https://cdn.dribbble.com/users/26516/screenshots/2491272/mountain-cry.gif')";
+        document.getElementById("error").style.display = "flex";
+
   }
   
   // inject text

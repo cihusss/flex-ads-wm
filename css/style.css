@@ -85,3 +85,11 @@ body {
   background: black;
   padding: 0 2px;
 }
+
+#error {
+  display: none;
+  height: 100%;
+  align-items: center;
+  padding: 20px;
+  color: red;
+}
