@@ -68,11 +68,13 @@ body {
 #logo {
   position: absolute;
   display: none;
+  width: 100px;
 }
 
 #button {
   position: absolute;
   display: none;
+  width: 32px;
 }
 
 #value {
